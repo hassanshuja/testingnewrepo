@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
-
+const port = process.env.PORT;
 const chromeOptions = {
     headless:true,
     defaultViewport: null,
@@ -57,6 +57,6 @@ app.get('/:id', async(req, res) => {
   })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('connectrd')
 })
